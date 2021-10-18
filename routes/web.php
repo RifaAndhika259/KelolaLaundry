@@ -22,3 +22,9 @@ Route::get('/admin', 'UserController@Index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('admin', function () { return view('user.admin'); })->middleware('checkRole:admin');
+Route::get('kasir', function () { return view('user.kasir'); })->middleware(['checkRole:kasir,admin']);
+Route::get('owner', function () { return view('user.owner'); })->middleware(['checkRole:owner,admin']);

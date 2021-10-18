@@ -9,7 +9,7 @@
 
      </ul>
 
-     {{-- <ul class="navbar-nav align-items-center right-nav-link">
+    <ul class="navbar-nav align-items-center right-nav-link">
 
        <li class="nav-item">
          <ul class="navbar-nav ml-auto">
@@ -63,6 +63,6 @@
                            @endguest
                        </ul>
        </li>
-     </ul> --}}
+     </ul>
    </nav>
    </header>

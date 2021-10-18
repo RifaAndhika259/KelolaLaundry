@@ -31,7 +31,7 @@
      <li>
         <a href="1" >
           <i class="icon-user"></i>
-          <span>Custumer</span>
+          <span>Costumer</span>
 
         </a>
 
