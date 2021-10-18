@@ -57,8 +57,14 @@
 
       <li>
         <a href="2">
-          <i class="icon-settings"></i> <span>Setting</span>
-
+          <i class="icon-layers"></i> <span>Outlet</span>
+          <i class="fa fa-angle-left float-right"></i>
+       </a>
+          <ul class="sidebar-submenu">
+         <li>
+             <a href="table-simple-tables.html"><i class="fa fa-circle-o"></i> Outlet</a></li>
+             <li><a href="table-header-tables.html"><i class="fa fa-circle-o"></i> List Outlet</a></li>
+      </ul>
         </a>
 
       </li>
