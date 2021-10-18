@@ -9,7 +9,7 @@
                 <div class="card">
 
                     <div class="card-body">
-                        <h1>Ini adalah halaman penjual</h1>
+                        <h1>Ini adalah halaman kasir</h1>
                     </div>
                 </div>
             </div>

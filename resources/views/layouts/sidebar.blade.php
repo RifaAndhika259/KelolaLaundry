@@ -10,7 +10,7 @@
     <ul class="sidebar-menu do-nicescrol">
      <li class="sidebar-header">MAIN NAVIGATION</li>
      <li>
-       <a href="index.html" >
+       <a href="{{url('admin')}}" >
          <i class="icon-home"></i> <span>Dashboard</span>
        </a>
 

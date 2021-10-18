@@ -8,7 +8,7 @@
                 <div class="card">
 
                     <div class="card-body">
-                        <h1>Ini adalah halaman pembeli</h1>
+                        <h1>Ini adalah halaman owner</h1>
                     </div>
                 </div>
             </div>
