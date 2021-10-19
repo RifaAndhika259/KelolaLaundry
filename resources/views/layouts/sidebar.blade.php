@@ -2,10 +2,10 @@
   <!--Start sidebar-wrapper-->
   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
     <div class="brand-logo">
-     <a href="index.html">
-      <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-      <h5 class="logo-text">RockerAdmin</h5>
-    </a>
+<center>
+      {{-- <img src="{{url('assets/galeri/foto.jpg')}}" class="logo-icon" alt="logo icon"> --}}
+      <h5 class="logo-text ">LAUNDRY</h5>
+    </center>
     </div>
     <ul class="sidebar-menu do-nicescrol">
      <li class="sidebar-header">MAIN NAVIGATION</li>
