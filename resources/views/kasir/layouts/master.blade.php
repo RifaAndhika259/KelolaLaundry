@@ -3,7 +3,7 @@
 <html lang="en">
 
 <!-- Mirrored from codervent.com/rocker/color-version/pages-blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Nov 2019 12:20:59 GMT -->
-@include ('layouts.head')
+@include ('kasir.layouts.head')
 
 <body>
 
@@ -11,11 +11,11 @@
  <div id="wrapper">
 
   <!--Start sidebar-wrapper-->
-   @include ('layouts.sidebar')
+   @include ('kasir.layouts.sidebar')
    <!--End sidebar-wrapper-->
 
 <!--Start topbar header-->
-@include ('layouts.topbar')
+@include ('kasir.layouts.topbar')
 <!--End topbar header-->
 
 <div class="clearfix"></div>
@@ -64,6 +64,6 @@
   {{-- @include('sweetalert::alert') --}}
 
   <!-- Bootstrap core JavaScript-->
-  @include ('layouts.js')
+  @include ('kasir.layouts.js')
 <!-- Mirrored from codervent.com/rocker/color-version/pages-blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Nov 2019 12:20:59 GMT -->
 </html>

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('kasir.layouts.master')
 @section('content')
 
 

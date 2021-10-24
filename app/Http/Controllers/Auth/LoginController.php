@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '';
     protected function redirectTo()
     {
         if (auth()->user()->role == 'kasir') {
@@ -41,7 +41,7 @@ class LoginController extends Controller
         if (auth()->user()->role == 'admin') {
             return '/admin';
         }
-        return '/home';
+        return '';
     }
 
 
