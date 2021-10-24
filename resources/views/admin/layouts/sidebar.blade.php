@@ -19,7 +19,7 @@
 
 
      <li>
-       <a href="1" >
+       <a href="{{url('admin/Admin-product/product')}}" >
          <i class="icon-layers"></i>
          <span>Product</span>
 
@@ -29,9 +29,9 @@
 
 
      <li>
-        <a href="1" >
+        <a href="{{url('admin/Admin-member/member')}}" >
           <i class="icon-user"></i>
-          <span>Costumer</span>
+          <span>Member</span>
 
         </a>
 
@@ -47,24 +47,20 @@
        </a>
        <ul class="sidebar-submenu">
          <li>
-             <a href="table-simple-tables.html"><i class="fa fa-circle-o"></i> Transaksi</a></li>
-             <li><a href="table-header-tables.html"><i class="fa fa-circle-o"></i> List Transaksi</a></li>
-             <li><a href="table-color-tables.html"><i class="fa fa-circle-o"></i> Riwayat Transaksi</a></li>
+             <a href="{{url('admin/Admin-transaksi/transaksi')}}"><i class="fa fa-circle-o"></i> Transaksi</a></li>
+             <li><a href="{{url('admin/Admin-transaksi/listtransaksi')}}"><i class="fa fa-circle-o"></i> List Transaksi</a></li>
+             <li><a href="{{url('admin/Admin-transaksi/riwayattransaksi')}}"><i class="fa fa-circle-o"></i> Riwayat Transaksi</a></li>
       </ul>
       </li>
 
 
 
+
       <li>
-        <a href="2">
-          <i class="icon-layers"></i> <span>Outlet</span>
-          <i class="fa fa-angle-left float-right"></i>
-       </a>
-          <ul class="sidebar-submenu">
-         <li>
-             <a href="table-simple-tables.html"><i class="fa fa-circle-o"></i> Outlet</a></li>
-             <li><a href="table-header-tables.html"><i class="fa fa-circle-o"></i> List Outlet</a></li>
-      </ul>
+        <a href="{{url('admin/Admin-outlet/outlet')}}" >
+          <i class="icon-note"></i>
+          <span>Outlet</span>
+
         </a>
 
       </li>
@@ -77,8 +73,8 @@
         </a>
         <ul class="sidebar-submenu">
           <li>
-              <a href="table-simple-tables.html"><i class="fa fa-circle-o"></i> Pengguna</a></li>
-              <li><a href="table-header-tables.html"><i class="fa fa-circle-o"></i> Hak Akses</a></li>
+              <a href="{{url('admin/Admin-manajement/pengguna')}}"><i class="fa fa-circle-o"></i> Pengguna</a></li>
+              <li><a href="{{url('admin/Admin-manajement/hakakses')}}"><i class="fa fa-circle-o"></i> Hak Akses</a></li>
 
        </ul>
        </li>
