@@ -25,37 +25,49 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 // route admin
-Route::get('admin', function () { return view('admin.admin'); })->middleware('checkRole:admin');
+Route::get('admin', function () {
+    return view('admin.admin');
+})->middleware('checkRole:admin');
 
 // Admin-product
-Route::get('admin/Admin-product/product','Adminproductcontroller@product');
+Route::get('admin/Admin-product/product', 'Adminproductcontroller@product');
+Route::post('admin/product/create', 'Adminproductcontroller@create');
+Route::get('/admin/{id}/edit', 'Adminproductcontroller@edit');
+Route::post('/admin/{id}/update', 'Adminproductcontroller@update');
+Route::get('/admin/{id}/delete', 'Adminproductcontroller@delete');
+
 // End admin-product
 
 // Admin-member
-Route::get('admin/Admin-member/member','Adminmembercontroller@member');
+Route::get('admin/Admin-member/member', 'Adminmembercontroller@member');
 // End Admin-member
 
 // Admin-transaksi
-Route::get('admin/Admin-transaksi/transaksi','Admintransaksicontroller@transaksi');
-Route::get('admin/Admin-transaksi/listtransaksi','Admintransaksicontroller@list');
-Route::get('admin/Admin-transaksi/riwayattransaksi','Admintransaksicontroller@riwayat');
-Route::get('admin/Admin-transaksi/detailtransaksi','Admintransaksicontroller@detail');
+Route::get('admin/Admin-transaksi/transaksi', 'Admintransaksicontroller@transaksi');
+Route::get('admin/Admin-transaksi/listtransaksi', 'Admintransaksicontroller@list');
+Route::get('admin/Admin-transaksi/riwayattransaksi', 'Admintransaksicontroller@riwayat');
+Route::get('admin/Admin-transaksi/detailtransaksi', 'Admintransaksicontroller@detail');
 
 // End transaksi
 
 // outlet
-Route::get('admin/Admin-outlet/outlet','Adminoutletcontroller@outlet');
+Route::get('admin/Admin-outlet/outlet', 'Adminoutletcontroller@outlet');
 // end outlet
 
 // manajement akses
-Route::get('admin/Admin-manajement/pengguna','Adminaksescontroller@pengguna');
-Route::get('admin/Admin-manajement/hakakses','Adminaksescontroller@HakAkses');
+Route::get('admin/Admin-manajement/pengguna', 'Adminaksescontroller@pengguna');
+Route::get('admin/Admin-manajement/hakakses', 'Adminaksescontroller@HakAkses');
 // End manajement akses
 
 // end admin
-Route::get('kasir', function () { return view('kasir.kasir'); })->middleware(['checkRole:kasir,admin']);
-Route::get('owner', function () { return view('owner.owner'); })->middleware(['checkRole:owner,admin']);
+Route::get('kasir', function () {
+    return view('kasir.kasir');
+})->middleware(['checkRole:kasir,admin']);
+Route::get('owner', function () {
+    return view('owner.owner');
+})->middleware(['checkRole:owner,admin']);
 
-Route::get('logout', function() {
-    Auth::logout(); return redirect('/');
+Route::get('logout', function () {
+    Auth::logout();
+    return redirect('/');
 });

@@ -36,21 +36,24 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($products as $product)
                             <tr>
-                                @foreach ($products as $product)
-
 
                                 <td>{{$product->object}}</td>
                                 <td>{{$product->type}}</td>
                                 <td>{{$product->price}}</td>
+
                                 <td>
-                                    <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i
-                                            class="icon-note"></i> </button>
-                                    <button type="button" class="btn btn-danger waves-effect waves-light m-1"> <i
-                                            class="fa fa-trash-o"></i> </button>
+                                    <a href="{{url('admin',$product->id)}}/edit"
+                                        class="btn btn-primary btn-sm waves-effect m-1"><i class="fa fa-edit"></i></a>
+                                    <a href="{{url('admin',$product->id)}}/delete"
+                                        class="btn btn-danger btn-sm waves-effect m-1"
+                                        onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
+                                            class="fa fa-trash"></i></a>
                                 </td>
-                                @endforeach
+
                             </tr>
+                            @endforeach
                     </table>
                 </div>
             </div>
@@ -70,30 +73,26 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{url('product')}}/create" method="POST">
+                <form action="{{url('admin/product')}}/create" method="POST">
                     {{csrf_field()}}
 
                     <div class="form-group">
-                        <label for="tanggal">Tanggal</label>
-                        <input required name="tanggal" type="date" class="form-control" id="tanggal"
-                            aria-describedby="tanggal">
-                    </div>
-
-
-
-
-                    <div class="form-group">
-                        <label for="pelatih">Pelatih</label>
-                        <input name="pelatih" type="text" class="form-control" id="pelatih" aria-describedby="pelatih"
+                        <label for="object">Nama Barang</label>
+                        <input name="object" type="text" class="form-control" id="object" aria-describedby="object"
                             required>
                     </div>
 
-
-                    <div class="form-floating">
-                        <label>Info</label>
-                        <textarea name="info" class="form-control" id="floatingTextarea2" style="height: 100px"
-                            required></textarea>
+                    <div class="form-group">
+                        <label for="type">Jenis</label>
+                        <input name="type" type="text" class="form-control" id="type" aria-describedby="type" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="price">Harga</label>
+                        <input name="price" type="text" class="form-control" id="price" aria-describedby="price"
+                            required>
+                    </div>
+
 
                     <div class="modal-footer">
 
