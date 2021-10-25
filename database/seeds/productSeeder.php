@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-
-class productSeeder extends Seeder
+use App\Product;
+class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,8 +11,11 @@ class productSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('product')->insert([
-            '', 'object', 'type', 'price'
+        Product::create([
+            'object'=>'boneka',
+            'type'=>'kiloan',
+            'price'=>'100000',
+
         ]);
     }
 }
