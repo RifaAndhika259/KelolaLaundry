@@ -24,7 +24,7 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <table id="default-datatable" class="table table-bordered">
-                        <div class="card-header"><i class="fa fa-table"></i> Data Product</div>
+                        <div class="card-header"><i class="fa fa-table"></i> Data Product Laundry</div>
                         <div class="card-body">
                         </div>
                         <thead>
