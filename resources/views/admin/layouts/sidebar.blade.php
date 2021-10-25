@@ -8,7 +8,7 @@
     </center>
     </div>
     <ul class="sidebar-menu do-nicescrol">
-     <li class="sidebar-header">MAIN NAVIGATION</li>
+     <li class="sidebar-header">MENU UTAMA</li>
      <li>
        <a href="{{url('admin')}}" >
          <i class="icon-home"></i> <span>Dashboard</span>
@@ -16,6 +16,7 @@
 
      </li>
 
+<hr>
 
 
      <li>
