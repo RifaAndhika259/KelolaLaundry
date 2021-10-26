@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 
 class Adminaksescontroller extends Controller
 {
-    public function pengguna(){
-      return view('admin/Admin-manajement/pengguna');
+    public function pengguna()
+    {
+        return view('admin/pengguna/pengguna');
     }
-    public function HakAkses(){
-        return view('admin/Admin-manajement/hakakses');
-      }
+    public function HakAkses()
+    {
+        return view('admin/hakakses/hakakses');
+    }
 }

@@ -12,20 +12,20 @@ class Adminproductcontroller extends Controller
     public function product(Request $request)
     {
         $products = Product::all();
-        return view('admin/Admin-product/product', compact('products'));
+        return view('admin/product.product', compact('products'));
     }
 
     public function create(Request $request)
     {
         Product::create($request->all());
         Alert::success('Berhasil', 'Data Sudah BerhasilDitambahkan');
-        return redirect('admin/Admin-product/product');
+        return redirect('admin/product');
     }
 
     public function edit($id)
     {
         $product = Product::find($id);
-        return view('admin.admin-product.edit', compact('product'));
+        return view('admin/product.edit', compact('product'));
     }
 
     public function update(Request $request, $id)
@@ -33,7 +33,7 @@ class Adminproductcontroller extends Controller
         $update = Product::find($id);
         $update->update($request->all());
         Alert::success('Berhasil', 'Data Sudah Berhasil Diubah');
-        return redirect('admin/Admin-product/product');
+        return redirect('admin/product');
     }
 
     public function delete($id)
@@ -41,6 +41,6 @@ class Adminproductcontroller extends Controller
         $delete = Product::find($id);
         $delete->delete();
         Alert::success('Berhasil', 'Data Sudah Berhasil Dihapus');
-        return redirect('admin/Admin-product/product');
+        return redirect('admin/product');
     }
 }

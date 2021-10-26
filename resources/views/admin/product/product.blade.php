@@ -29,6 +29,7 @@
                         </div>
                         <thead>
                             <tr>
+                                <th>no</th>
                                 <th>nama barang</th>
                                 <th>Jenis</th>
                                 <th>Harga</th>
@@ -36,9 +37,10 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $i = 1; ?>
                             @foreach ($products as $product)
                             <tr>
-
+                                <td>{{$i++}}</td>
                                 <td>{{$product->object}}</td>
                                 <td>{{$product->type}}</td>
                                 <td>{{$product->price}}</td>
@@ -73,7 +75,7 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{url('admin/product')}}/create" method="POST">
+                <form action="{{url('product')}}/create" method="POST">
                     {{csrf_field()}}
 
                     <div class="form-group">
@@ -89,7 +91,7 @@
 
                     <div class="form-group">
                         <label for="price">Harga</label>
-                        <input name="price" type="text" class="form-control" id="price" aria-describedby="price"
+                        <input name="price" type="number" class="form-control" id="price" aria-describedby="price"
                             required>
                     </div>
 

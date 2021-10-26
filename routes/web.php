@@ -30,8 +30,8 @@ Route::get('admin', function () {
 })->middleware('checkRole:admin');
 
 // Admin-product
-Route::get('admin/Admin-product/product', 'Adminproductcontroller@product');
-Route::post('admin/product/create', 'Adminproductcontroller@create');
+Route::get('admin/product', 'Adminproductcontroller@product');
+Route::post('product/create', 'Adminproductcontroller@create');
 Route::get('/admin/{id}/edit', 'Adminproductcontroller@edit');
 Route::post('/admin/{id}/update', 'Adminproductcontroller@update');
 Route::get('/admin/{id}/delete', 'Adminproductcontroller@delete');
@@ -39,24 +39,28 @@ Route::get('/admin/{id}/delete', 'Adminproductcontroller@delete');
 // End admin-product
 
 // Admin-member
-Route::get('admin/Admin-member/member', 'Adminmembercontroller@member');
+Route::get('admin/member', 'Adminmembercontroller@member');
+Route::post('member/create', 'Adminmembercontroller@create');
+Route::get('/member/{id}/edit', 'Adminmembercontroller@edit');
+Route::post('/member/{id}/update', 'Adminmembercontroller@update');
+
 // End Admin-member
 
 // Admin-transaksi
-Route::get('admin/Admin-transaksi/transaksi', 'Admintransaksicontroller@transaksi');
-Route::get('admin/Admin-transaksi/listtransaksi', 'Admintransaksicontroller@list');
-Route::get('admin/Admin-transaksi/riwayattransaksi', 'Admintransaksicontroller@riwayat');
-Route::get('admin/Admin-transaksi/detailtransaksi', 'Admintransaksicontroller@detail');
+Route::get('admin/transaksi', 'Admintransaksicontroller@transaksi');
+Route::get('admin/listtransaksi', 'Admintransaksicontroller@list');
+Route::get('admin/riwayattransaksi', 'Admintransaksicontroller@riwayat');
+Route::get('admin/detailtransaksi', 'Admintransaksicontroller@detail');
 
 // End transaksi
 
 // outlet
-Route::get('admin/Admin-outlet/outlet', 'Adminoutletcontroller@outlet');
+Route::get('admin/outlet', 'Adminoutletcontroller@outlet');
 // end outlet
 
 // manajement akses
-Route::get('admin/Admin-manajement/pengguna', 'Adminaksescontroller@pengguna');
-Route::get('admin/Admin-manajement/hakakses', 'Adminaksescontroller@HakAkses');
+Route::get('admin/pengguna', 'Adminaksescontroller@pengguna');
+Route::get('admin/hakakses', 'Adminaksescontroller@HakAkses');
 // End manajement akses
 
 // end admin

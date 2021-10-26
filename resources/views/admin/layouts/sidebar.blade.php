@@ -19,7 +19,7 @@
 
 
         <li>
-            <a href="{{url('admin/Admin-product/product')}}">
+            <a href="{{url('admin/product')}}">
                 <i class="icon-layers"></i>
                 <span>Product</span>
 
@@ -29,7 +29,7 @@
 
 
         <li>
-            <a href="{{url('admin/Admin-member/member')}}">
+            <a href="{{url('admin/member')}}">
                 <i class="icon-user"></i>
                 <span>Member</span>
 
@@ -47,11 +47,11 @@
             </a>
             <ul class="sidebar-submenu">
                 <li>
-                    <a href="{{url('admin/Admin-transaksi/transaksi')}}"><i class="fa fa-circle-o"></i> Transaksi</a>
+                    <a href="{{url('admin/transaksi')}}"><i class="fa fa-circle-o"></i> Transaksi</a>
                 </li>
-                <li><a href="{{url('admin/Admin-transaksi/listtransaksi')}}"><i class="fa fa-circle-o"></i> List
+                <li><a href="{{url('admin/listtransaksi')}}"><i class="fa fa-circle-o"></i> List
                         Transaksi</a></li>
-                <li><a href="{{url('admin/Admin-transaksi/riwayattransaksi')}}"><i class="fa fa-circle-o"></i> Riwayat
+                <li><a href="{{url('admin/riwayattransaksi')}}"><i class="fa fa-circle-o"></i> Riwayat
                         Transaksi</a></li>
             </ul>
         </li>
@@ -60,7 +60,7 @@
 
 
         <li>
-            <a href="{{url('admin/Admin-outlet/outlet')}}">
+            <a href="{{url('admin/outlet')}}">
                 <i class="icon-note"></i>
                 <span>Outlet</span>
 
@@ -76,9 +76,9 @@
             </a>
             <ul class="sidebar-submenu">
                 <li>
-                    <a href="{{url('admin/Admin-manajement/pengguna')}}"><i class="fa fa-circle-o"></i> Pengguna</a>
+                    <a href="{{url('admin/pengguna')}}"><i class="fa fa-circle-o"></i> Pengguna</a>
                 </li>
-                <li><a href="{{url('admin/Admin-manajement/hakakses')}}"><i class="fa fa-circle-o"></i> Hak Akses</a>
+                <li><a href="{{url('admin/hakakses')}}"><i class="fa fa-circle-o"></i> Hak Akses</a>
                 </li>
 
             </ul>

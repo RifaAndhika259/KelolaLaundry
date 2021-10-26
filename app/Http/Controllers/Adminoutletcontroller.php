@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class Adminoutletcontroller extends Controller
 {
-    public function outlet(){
-        return view('admin/Admin-outlet/outlet');
+    public function outlet()
+    {
+        return view('admin/outlet/outlet');
     }
 }

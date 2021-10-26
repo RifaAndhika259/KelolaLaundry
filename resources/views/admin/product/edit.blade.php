@@ -32,7 +32,7 @@
 
     <div class="form-group">
         <label for="price">Harga</label>
-        <input required name="price" type="text" class="form-control" id="price" aria-describedby="price"
+        <input required name="price" type="number" class="form-control" id="price" aria-describedby="price"
             value="{{$product->price}}">
     </div>
 
@@ -41,8 +41,7 @@
 
     <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Update</button>
-        <button type="submit" class="btn btn-danger"> <a
-                href="{{url('/admin/Admin-product/product')}}">Batal</a></button>
+        <button type="submit" class="btn btn-danger"> <a href="{{url('/admin/product')}}">Batal</a></button>
     </div>
 </form>
 
