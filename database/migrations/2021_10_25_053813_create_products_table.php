@@ -17,7 +17,6 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('care')->nullable();
             $table->string('object');
-            $table->string('type');
             $table->string('price');
             $table->timestamps();
         });

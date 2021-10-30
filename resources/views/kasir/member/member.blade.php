@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('kasir.layouts.master')
 @section('content')
 <div class="row">
     <div class="col">
@@ -7,7 +7,7 @@
                 <i class="fas fa-table"></i>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     +
-                </button> Tambah Product
+                </button> Tambah Member
 
             </div>
 
@@ -24,29 +24,33 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <table id="default-datatable" class="table table-bordered">
-                        <div class="card-header"><i class="fa fa-table"></i> Data Product Laundry</div>
+                        <div class="card-header"><i class="fa fa-table"></i> Data Member Laundry</div>
                         <div class="card-body">
                         </div>
                         <thead>
                             <tr>
                                 <th>no</th>
                                 <th>nama</th>
-                                <th>Harga</th>
+                                <th>telephone</th>
+                                <th>email</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $i = 1; ?>
-                            @foreach ($products as $product)
+                            @foreach ($members as $member)
+
                             <tr>
+
                                 <td>{{$i++}}</td>
-                                <td>{{$product->object}}</td>
-                                <td>{{$product->price}}</td>
+                                <td>{{$member->name}}</td>
+                                <td>{{$member->telephone}}</td>
+                                <td>{{$member->email}}</td>
 
                                 <td>
-                                    <a href="{{url('admin',$product->id)}}/edit"
+                                    <a href="{{url('member',$member->id)}}/edit"
                                         class="btn btn-primary btn-sm waves-effect m-1"><i class="fa fa-edit"></i></a>
-                                    <a href="{{url('admin',$product->id)}}/delete"
+                                    <a href="{{url('member',$member->id)}}/delete"
                                         class="btn btn-danger btn-sm waves-effect m-1"
                                         onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
                                             class="fa fa-trash"></i></a>
@@ -73,19 +77,24 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{url('product')}}/create" method="POST">
+                <form action="{{url('member')}}/create" method="POST">
                     {{csrf_field()}}
 
                     <div class="form-group">
-                        <label for="object">Nama</label>
-                        <input name="object" type="text" class="form-control" id="object" aria-describedby="object"
-                            required>
+                        <label for="name">Nama</label>
+                        <input name="name" type="text" class="form-control" id="name" aria-describedby="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">Telephone</label>
+                        <input name="telephone" type="number" class="form-control" id="telephone"
+                            aria-describedby="telephone" required>
                     </div>
 
 
                     <div class="form-group">
-                        <label for="price">Harga</label>
-                        <input name="price" type="number" class="form-control" id="price" aria-describedby="price"
+                        <label for="email">Email</label>
+                        <input name="email" type="email" class="form-control" id="email" aria-describedby="email"
                             required>
                     </div>
 

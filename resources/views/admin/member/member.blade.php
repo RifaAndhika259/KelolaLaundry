@@ -31,9 +31,8 @@
                             <tr>
                                 <th>no</th>
                                 <th>nama</th>
-                                <th>alamat</th>
-                                <th>jenis kelamin</th>
                                 <th>telephone</th>
+                                <th>email</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -45,9 +44,8 @@
 
                                 <td>{{$i++}}</td>
                                 <td>{{$member->name}}</td>
-                                <td>{{$member->address}}</td>
-                                <td>{{$member->gender}}</td>
                                 <td>{{$member->telephone}}</td>
+                                <td>{{$member->email}}</td>
 
                                 <td>
                                     <a href="{{url('member',$member->id)}}/edit"
@@ -88,25 +86,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="address">alamat</label>
-                        <input name="address" address="text" class="form-control" id="address"
-                            aria-describedby="address" required>
-                    </div>
-
-                    <div class="form-group">
-
-                        <select name="gender" class="form-select form-select-sm" aria-label=".form-select-sm example"
-                            required>
-                            <option selected>Pilih Jenis Kelamin</option>
-                            <option value="male">Laki-Laki</option>
-                            <option value="pemale">Perempuan</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
                         <label for="telephone">Telephone</label>
                         <input name="telephone" type="number" class="form-control" id="telephone"
                             aria-describedby="telephone" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" class="form-control" id="email" aria-describedby="email"
+                            required>
                     </div>
 
 

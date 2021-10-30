@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('kasir.layouts.master')
 @section('content')
 <div class="modal-body">
 
@@ -10,6 +10,8 @@
             <input name="name" type="text" class="form-control" id="name" aria-describedby="name" required
                 value="{{$member->name}}">
         </div>
+
+
 
         <div class="form-group">
             <label for="telephone">Telephone</label>
@@ -23,10 +25,11 @@
                 value="{{$member->email}}" required>
         </div>
 
+
         <div class="modal-footer">
 
             <button type="submit" class="btn btn-primary">UPDATE</button>
-            <button type="submit" class="btn btn-danger"> <a href="{{url('/admin/member')}}">Batal</a></button>
+            <button type="submit" class="btn btn-danger"> <a href="{{url('/kasir/member')}}">Batal</a></button>
         </div>
     </form>
 

@@ -43,6 +43,7 @@ Route::get('admin/member', 'Adminmembercontroller@member');
 Route::post('member/create', 'Adminmembercontroller@create');
 Route::get('/member/{id}/edit', 'Adminmembercontroller@edit');
 Route::post('/member/{id}/update', 'Adminmembercontroller@update');
+Route::get('/member/{id}/delete', 'Adminmembercontroller@delete');
 
 // End Admin-member
 
@@ -63,6 +64,15 @@ Route::get('admin/pengguna', 'Adminaksescontroller@pengguna');
 Route::get('admin/hakakses', 'Adminaksescontroller@HakAkses');
 // End manajement akses
 
+
+
+
+// kasir member
+Route::get('kasir/member', 'kasirmembercontroller@member');
+Route::post('member/create', 'kasirmembercontroller@create');
+Route::get('/member/{id}/edit', 'kasirmembercontroller@edit');
+Route::post('/member/{id}/update', 'kasirmembercontroller@update');
+Route::get('/member/{id}/delete', 'kasirmembercontroller@delete');
 // end admin
 Route::get('kasir', function () {
     return view('kasir.kasir');

@@ -25,12 +25,6 @@
     </div>
 
     <div class="form-group">
-        <label for="type">Jenis</label>
-        <input required name="type" type="text" class="form-control" id="type" aria-describedby="type"
-            value="{{$product->type}}">
-    </div>
-
-    <div class="form-group">
         <label for="price">Harga</label>
         <input required name="price" type="number" class="form-control" id="price" aria-describedby="price"
             value="{{$product->price}}">

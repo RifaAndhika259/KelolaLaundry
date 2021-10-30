@@ -12,7 +12,7 @@
             <a href="{{url('admin')}}">
                 <i class="icon-home"></i> <span>Dashboard</span>
             </a>
-
+            <hr>
         </li>
 
         <hr>
