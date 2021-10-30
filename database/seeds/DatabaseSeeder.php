@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
             AdminUserSeeder::class,
             KasirUserSeeder::class,
             OwnerUserSeeder::class,
-            ProductSeeder::class,
         ]);
     }
 }

@@ -26,9 +26,9 @@
        </a>
        <ul class="sidebar-submenu">
          <li>
-             <a href="table-simple-tables.html"><i class="fa fa-circle-o"></i> Transaksi</a></li>
-             <li><a href="table-header-tables.html"><i class="fa fa-circle-o"></i> List Transaksi</a></li>
-             <li><a href="table-color-tables.html"><i class="fa fa-circle-o"></i> Riwayat Transaksi</a></li>
+             <a href="{{url('kasir/transaksi')}}"><i class="fa fa-circle-o"></i> Transaksi</a></li>
+             <li><a href="{{url('kasir/listtransaksi')}}"><i class="fa fa-circle-o"></i> List Transaksi</a></li>
+             <li><a href="{{url('kasir/riwayattransaksi')}}"><i class="fa fa-circle-o"></i> Riwayat Transaksi</a></li>
       </ul>
       </li>
 

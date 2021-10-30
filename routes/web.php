@@ -51,7 +51,6 @@ Route::get('admin/transaksi', 'Admintransaksicontroller@transaksi');
 Route::get('admin/listtransaksi', 'Admintransaksicontroller@list');
 Route::get('admin/riwayattransaksi', 'Admintransaksicontroller@riwayat');
 Route::get('admin/detailtransaksi', 'Admintransaksicontroller@detail');
-
 // End transaksi
 
 // outlet
@@ -62,11 +61,22 @@ Route::get('admin/outlet', 'Adminoutletcontroller@outlet');
 Route::get('admin/pengguna', 'Adminaksescontroller@pengguna');
 Route::get('admin/hakakses', 'Adminaksescontroller@HakAkses');
 // End manajement akses
-
 // end admin
+
+
+// route admin
 Route::get('kasir', function () {
     return view('kasir.kasir');
 })->middleware(['checkRole:kasir,admin']);
+
+// kasir-transaksi
+Route::get('kasir/transaksi', 'Kasirtransaksicontroller@transaksi');
+Route::get('kasir/listtransaksi', 'Kasirtransaksicontroller@list');
+Route::get('kasir/riwayattransaksi', 'Kasirtransaksicontroller@riwayat');
+Route::get('kasir/detailtransaksi', 'Kasirtransaksicontroller@detail');
+// End transaksi
+// end kasir
+
 Route::get('owner', function () {
     return view('owner.owner');
 })->middleware(['checkRole:owner,admin']);
