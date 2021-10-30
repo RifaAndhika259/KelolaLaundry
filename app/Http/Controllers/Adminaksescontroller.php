@@ -8,10 +8,10 @@ class Adminaksescontroller extends Controller
 {
     public function pengguna()
     {
-        return view('admin/pengguna/pengguna');
+        return view('admin/manajementuser/pengguna');
     }
     public function HakAkses()
     {
-        return view('admin/hakakses/hakakses');
+        return view('admin/manajementuser/hakakses');
     }
 }

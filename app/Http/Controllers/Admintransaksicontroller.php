@@ -12,11 +12,11 @@ class Admintransaksicontroller extends Controller
     }
     public function list()
     {
-        return view('admin/listtransaksi/listtransaksi');
+        return view('admin/transaksi/listtransaksi');
     }
     public function riwayat()
     {
-        return view('admin/riwayat/riwayat');
+        return view('admin/transaksi/riwayat');
     }
     public function detail()
     {
