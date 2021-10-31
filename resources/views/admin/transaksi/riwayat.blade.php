@@ -9,9 +9,10 @@
           <table id="default-datatable" class="table table-bordered">
             <thead>
                 <tr>
+                    <th>kode invoice</th>
                     <th>nama pemilik</th>
-                    <th>Jenis kelamin</th>
-                     <th>nama barang</th>
+                    <th>nama paket</th>
+                    <th>Jenis</th>
                     <th>Harga</th>
                     <th>tanggal</th>
                     <th>pajak</th>
@@ -22,17 +23,18 @@
             </thead>
             <tbody>
         <tr>
-            <td>budi</td>
-            <td>laki-laki</td>
-            <td>kasur</td>
+            <td>TDR-00001</td>
+            <th>supradi</th>
+            <td>selimut</td>
+            <td>Kiloan</td>
             <td>25000</td>
-            <td>24-10-2021</td>
+            <td>31-10-2021</td>
             <td>10000</td>
             <td>lunas</td>
-            <td>selesai</td>
+            <td>proses</td>
             <td>
-            <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i class="fa fa-download"></i> </button>
-
+                <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i class="fa fa-download"></i> </button>
+        </td>
         </tr>
         </table>
         </div>

@@ -9,7 +9,9 @@
           <table id="default-datatable" class="table table-bordered">
             <thead>
                 <tr>
-                    <th>nama_barang</th>
+                    <th>kode invoice</th>
+                    <th>nama pemilik</th>
+                    <th>nama paket</th>
                     <th>Jenis</th>
                     <th>Harga</th>
                     <th>tanggal </th>
@@ -21,6 +23,8 @@
             </thead>
             <tbody>
         <tr>
+            <td>TDR-00001</td>
+            <th>supradi</th>
             <td>selimut</td>
             <td>Kiloan</td>
             <td>25000</td>
@@ -29,8 +33,9 @@
             <td>lunas</td>
             <td>proses</td>
             <td>
-            <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i class="fa fa-download"></i> </button>
-
+            <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i class="fa fa-check"></i> </button>
+           <a href="{{url('admin/Admin-transaksi/detailtransaksi')}}"><button type="button" class="btn btn-success waves-effect waves-light m-1"> <i class="fa fa-info"></i>
+        </td>
         </tr>
         </table>
         </div>
