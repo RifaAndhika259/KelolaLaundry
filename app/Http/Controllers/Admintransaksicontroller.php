@@ -20,6 +20,6 @@ class Admintransaksicontroller extends Controller
     }
     public function detail()
     {
-        return view('admin/detailtransaksi/detailtransaksi');
+        return view('admin/transaksi/detailtransaksi');
     }
 }

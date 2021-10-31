@@ -51,7 +51,7 @@ Route::get('/member/{id}/delete', 'Adminmembercontroller@delete');
 Route::get('admin/transaksi', 'Admintransaksicontroller@transaksi');
 Route::get('admin/listtransaksi', 'Admintransaksicontroller@list');
 Route::get('admin/riwayattransaksi', 'Admintransaksicontroller@riwayat');
-Route::get('admin/detailtransaksi', 'Admintransaksicontroller@detail');
+Route::get('admin/transaksi/detailtransaksi', 'Admintransaksicontroller@detail');
 
 // End transaksi
 

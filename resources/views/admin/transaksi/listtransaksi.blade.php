@@ -34,7 +34,7 @@
             <td>proses</td>
             <td>
             <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i class="fa fa-check"></i> </button>
-           <a href="{{url('admin/Admin-transaksi/detailtransaksi')}}"><button type="button" class="btn btn-success waves-effect waves-light m-1"> <i class="fa fa-info"></i>
+           <a href="{{url('admin/transaksi/detailtransaksi')}}"><button type="button" class="btn btn-success waves-effect waves-light m-1"> <i class="fa fa-info"></i>
         </td>
         </tr>
         </table>
