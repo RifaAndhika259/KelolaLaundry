@@ -1,19 +1,5 @@
 @extends('admin.layouts.master')
 @section('content')
-<div class="row">
-    <div class="col">
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-table"></i>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    +
-                </button> Tambah Member
-
-            </div>
-
-        </div>
-    </div>
-</div>
 
 {{-- table --}}
 <div class="row">
@@ -24,8 +10,12 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <table id="default-datatable" class="table table-bordered">
-                        <div class="card-header"><i class="fa fa-table"></i> Data Member Laundry</div>
+                        <div class="card-header">Member
+                        </div>
                         <div class="card-body">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Tambah Member
+                            </button>
                         </div>
                         <thead>
                             <tr>
@@ -70,7 +60,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Member</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

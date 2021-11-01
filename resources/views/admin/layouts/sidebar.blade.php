@@ -15,9 +15,6 @@
             <hr>
         </li>
 
-        <hr>
-
-
         <li>
             <a href="{{url('admin/product')}}">
                 <i class="icon-layers"></i>
@@ -27,7 +24,6 @@
 
         </li>
 
-
         <li>
             <a href="{{url('admin/member')}}">
                 <i class="icon-user"></i>
@@ -36,9 +32,6 @@
             </a>
 
         </li>
-
-
-
 
         <li>
             <a href="javaScript:void();" class="waves-effect">
@@ -56,18 +49,12 @@
             </ul>
         </li>
 
-
-
-
         <li>
             <a href="{{url('admin/outlet')}}">
                 <i class="icon-note"></i>
                 <span>Outlet</span>
-
             </a>
-
         </li>
-
 
         <li>
             <a href="javaScript:void();" class="waves-effect">

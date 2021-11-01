@@ -57,15 +57,16 @@ Route::get('admin/transaksi/detailtransaksi', 'Admintransaksicontroller@detail')
 
 // outlet
 Route::get('admin/outlet', 'Adminoutletcontroller@outlet');
+Route::post('outlet/create', 'Adminoutletcontroller@create');
+Route::get('/admin/{id}/edit', 'Adminoutletcontroller@edit');
+Route::post('/admin/{id}/update', 'Adminoutletcontroller@update');
+Route::get('/admin/{id}/delete', 'Adminoutletcontroller@delete');
 // end outlet
 
 // manajement akses
 Route::get('admin/pengguna', 'Adminaksescontroller@pengguna');
 Route::get('admin/hakakses', 'Adminaksescontroller@HakAkses');
 // End manajement akses
-
-
-
 
 // kasir member
 Route::get('kasir/member', 'kasirmembercontroller@member');

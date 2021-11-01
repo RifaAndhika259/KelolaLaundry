@@ -1,19 +1,5 @@
 @extends('admin.layouts.master')
 @section('content')
-<div class="row">
-    <div class="col">
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-table"></i>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    +
-                </button> Tambah Product
-
-            </div>
-
-        </div>
-    </div>
-</div>
 
 {{-- table --}}
 <div class="row">
@@ -24,8 +10,13 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <table id="default-datatable" class="table table-bordered">
-                        <div class="card-header"><i class="fa fa-table"></i> Data Product Laundry</div>
+                        <div class="card-header">Product
+
+                        </div>
                         <div class="card-body">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Tambah Product
+                            </button>
                         </div>
                         <thead>
                             <tr>
@@ -51,7 +42,6 @@
                                         onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
                                             class="fa fa-trash"></i></a>
                                 </td>
-
                             </tr>
                             @endforeach
                     </table>
@@ -66,7 +56,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah produk</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -82,22 +72,17 @@
                             required>
                     </div>
 
-
                     <div class="form-group">
                         <label for="price">Harga</label>
                         <input name="price" type="number" class="form-control" id="price" aria-describedby="price"
                             required>
                     </div>
 
-
                     <div class="modal-footer">
-
                         <button type="submit" class="btn btn-primary">Tambah</button>
                     </div>
                 </form>
-
             </div>
-
         </div>
     </div>
 </div>

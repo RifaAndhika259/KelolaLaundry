@@ -1,6 +1,7 @@
 @extends('admin.layouts.master')
 @section('content')
 
+<div class="dashboard">
 <div class="row mt-3">
     <div class="col-12 col-lg-6 col-xl-3">
       <div class="card bg-pattern-primary">
@@ -59,4 +60,6 @@
       </div>
     </div>
   </div>
+</div>
 @endsection
+

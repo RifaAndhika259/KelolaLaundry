@@ -35,7 +35,7 @@
 
     <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Update</button>
-        <button type="submit" class="btn btn-danger"> <a href="{{url('/admin/product')}}">Batal</a></button>
+        <button type="submit" class="btn btn-danger" a href="{{url('/admin/product')}}">Batal</a></button>
     </div>
 </form>
 

@@ -26,7 +26,7 @@
         <div class="modal-footer">
 
             <button type="submit" class="btn btn-primary">UPDATE</button>
-            <button type="submit" class="btn btn-danger"> <a href="{{url('/admin/member')}}">Batal</a></button>
+            <button type="submit" class="btn btn-danger" a href="{{url('/admin/member')}}">Batal</a></button>
         </div>
     </form>
 
