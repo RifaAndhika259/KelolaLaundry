@@ -7,39 +7,46 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Http\Request;
 
-class Adminoutletcontroller extends Controller
+class AdminOutletcontroller extends Controller
 {
     public function outlet(Request $request)
     {
-        $outlets = Outlet::all();
-        return view('admin/outlet.outlet', compact('outlets'));
+        $Outlets = Outlet::all();
+        return view('admin/Outlet.Outlet', compact('Outlets'));
     }
 
     public function create(Request $request)
     {
-        outlet::create($request->all());
+        $data = Outlet::create([
+            'name' => $request->name,
+            'address' => $request->address,
+            'telephone' => $request->telephone,
+        ]);
+
+        // dd($data);
+
         Alert::success('Berhasil', 'Data Sudah BerhasilDitambahkan');
         return redirect('admin/outlet');
-}
+    }
     public function edit($id)
     {
-        $outlet = outlet::find($id);
-        return view('admin/outlet.edit', compact('outlet'));
+        $Outlet = Outlet::find($id);
+        return view('admin/Outlet.edit', compact('Outlet'));
     }
 
     public function update(Request $request, $id)
     {
-        $update = outlet::find($id);
+        $update = Outlet::find($id);
         $update->update($request->all());
         Alert::success('Berhasil', 'Data Sudah Berhasil Diubah');
-        return redirect('admin/outlet');
+        return redirect('admin/Outlet');
     }
 
     public function delete($id)
     {
-        $delete = outlet::find($id);
+        $delete = Outlet::find($id);
         $delete->delete();
         Alert::success('Berhasil', 'Data Sudah Berhasil Dihapus');
-        return redirect('admin/outlet');
+        return redirect('admin/Outlet');
     }
 }

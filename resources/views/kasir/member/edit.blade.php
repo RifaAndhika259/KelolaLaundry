@@ -2,7 +2,7 @@
 @section('content')
 <div class="modal-body">
 
-    <form action="{{url('member', $member->id)}}/update" method="POST">
+    <form action="{{url('kasir/member', $member->id)}}/update" method="POST">
         {{csrf_field()}}
 
         <div class="form-group">

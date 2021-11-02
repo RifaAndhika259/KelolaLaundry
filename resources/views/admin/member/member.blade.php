@@ -13,7 +13,8 @@
                         <div class="card-header">Member
                         </div>
                         <div class="card-body">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
                                 Tambah Member
                             </button>
                         </div>
@@ -38,9 +39,9 @@
                                 <td>{{$member->email}}</td>
 
                                 <td>
-                                    <a href="{{url('member',$member->id)}}/edit"
+                                    <a href="{{url('admin/member',$member->id)}}/edit"
                                         class="btn btn-primary btn-sm waves-effect m-1"><i class="fa fa-edit"></i></a>
-                                    <a href="{{url('member',$member->id)}}/delete"
+                                    <a href="{{url('admin/member',$member->id)}}/delete"
                                         class="btn btn-danger btn-sm waves-effect m-1"
                                         onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
                                             class="fa fa-trash"></i></a>
@@ -67,7 +68,7 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{url('member')}}/create" method="POST">
+                <form action="{{url('admin/member')}}/create" method="POST">
                     {{csrf_field()}}
 
                     <div class="form-group">

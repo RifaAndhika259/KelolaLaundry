@@ -39,11 +39,14 @@ Route::get('/admin/{id}/delete', 'Adminproductcontroller@delete');
 // End admin-product
 
 // Admin-member
-Route::get('admin/member', 'Adminmembercontroller@member');
-Route::post('member/create', 'Adminmembercontroller@create');
-Route::get('/member/{id}/edit', 'Adminmembercontroller@edit');
-Route::post('/member/{id}/update', 'Adminmembercontroller@update');
-Route::get('/member/{id}/delete', 'Adminmembercontroller@delete');
+Route::prefix('admin')->group(function () {
+
+    Route::get('member', 'Adminmembercontroller@member');
+    Route::post('member/create', 'Adminmembercontroller@create');
+    Route::get('member/{id}/edit', 'Adminmembercontroller@edit');
+    Route::post('member/{id}/update', 'Adminmembercontroller@update');
+    Route::get('member/{id}/delete', 'Adminmembercontroller@delete');
+});
 
 // End Admin-member
 
@@ -56,11 +59,11 @@ Route::get('admin/transaksi/detailtransaksi', 'Admintransaksicontroller@detail')
 // End transaksi
 
 // outlet
-Route::get('admin/outlet', 'Adminoutletcontroller@outlet');
-Route::post('outlet/create', 'Adminoutletcontroller@create');
-Route::get('/admin/{id}/edit', 'Adminoutletcontroller@edit');
-Route::post('/admin/{id}/update', 'Adminoutletcontroller@update');
-Route::get('/admin/{id}/delete', 'Adminoutletcontroller@delete');
+// Route::get('admin/outlet', 'Adminoutletcontroller@outlet');
+// Route::post('outlet/create', 'Adminoutletcontroller@create');
+// Route::get('/admin/{id}/edit', 'Adminoutletcontroller@edit');
+// Route::post('/admin/{id}/update', 'Adminoutletcontroller@update');
+// Route::get('/admin/{id}/delete', 'Adminoutletcontroller@delete');
 // end outlet
 
 // manajement akses
@@ -69,11 +72,14 @@ Route::get('admin/hakakses', 'Adminaksescontroller@HakAkses');
 // End manajement akses
 
 // kasir member
-Route::get('kasir/member', 'kasirmembercontroller@member');
-Route::post('member/create', 'kasirmembercontroller@create');
-Route::get('/member/{id}/edit', 'kasirmembercontroller@edit');
-Route::post('/member/{id}/update', 'kasirmembercontroller@update');
-Route::get('/member/{id}/delete', 'kasirmembercontroller@delete');
+Route::prefix('kasir')->group(function () {
+    Route::get('member', 'kasirmembercontroller@member');
+    Route::post('member/create', 'kasirmembercontroller@create');
+    Route::get('member/{id}/edit', 'kasirmembercontroller@edit');
+    Route::post('member/{id}/update', 'kasirmembercontroller@update');
+    Route::get('member/{id}/delete', 'kasirmembercontroller@delete');
+});
+
 // end admin
 Route::get('kasir', function () {
     return view('kasir.kasir');
