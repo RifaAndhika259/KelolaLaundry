@@ -37,12 +37,20 @@
                             <td> {{$outlet->telephone}}</td>
 
                             <td>
+                                <a href="{{url('/admin/outlet',$outlet->id)}}/edit"
+                                    class="btn btn-primary btn-sm waves-effect m-1"><i class="fa fa-edit"></i></a>
+                                <a href="{{url('/admin/outlet',$outlet->id)}}/delete"
+                                    class="btn btn-danger btn-sm waves-effect m-1"
+                                    onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
+                                        class="fa fa-trash"></i></a>
+                            </td>
+                            {{-- <td>
                                 <a href="" class="btn btn-primary btn-sm waves-effect m-1"><i
                                         class="fa fa-edit"></i></a>
                                 <a href="" class="btn btn-danger btn-sm waves-effect m-1"
                                     onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
                                         class="fa fa-trash"></i></a>
-                            </td>
+                            </td> --}}
 
                             @endforeach
                     </table>
