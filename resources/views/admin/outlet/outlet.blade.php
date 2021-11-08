@@ -14,13 +14,13 @@
                         <div class="card-body">
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModal">
-                                Tambah Product
+                                Tambah Outlet
                             </button>
                         </div>
                         <thead>
                             <tr>
                                 <th>no</th>
-                                <th>nama </th>
+                                <th>nama toko </th>
                                 <th>alamat</th>
                                 <th>telephon</th>
                                 <th> action </th>
