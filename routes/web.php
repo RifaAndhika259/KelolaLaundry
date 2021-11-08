@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -90,6 +91,16 @@ Route::prefix('kasir')->group(function () {
 Route::get('owner', function () {
     return view('owner.owner');
 })->middleware(['checkRole:owner,admin']);
+
+
+Route::prefix('owner')->group(function () {
+
+    Route::get('/transaksi/riwayat', 'Ownertransaksicontroller@transaksi')->name('owner');
+});
+
+
+
+
 
 Route::get('logout', function () {
     Auth::logout();
