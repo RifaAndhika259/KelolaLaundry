@@ -13,7 +13,17 @@ class MemberSeeder extends Seeder
     {
      $Member = Member::create([
       'name' => 'budi',
-      'telephone' => '089019201',
+      'telephone' => '0820192010852',
+      'email' => 'budi@gmail.com',
+     ]);
+     $Member = Member::create([
+        'name' => 'Sukma',
+        'telephone' => '08212118208234',
+        'email' => 'budi@gmail.com',
+       ]);
+     $Member = Member::create([
+      'name' => 'budi',
+      'telephone' => '0890192018648',
       'email' => 'budi@gmail.com',
      ]);
     }

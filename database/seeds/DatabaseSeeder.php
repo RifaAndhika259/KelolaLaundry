@@ -1,6 +1,7 @@
 <?php
 
 use App\Member;
+use App\Outlet;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +17,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ProdukSeeder::class,
             MemberSeeder::class,
+            OuletsSeeder::class,
         ]);
     }
 }

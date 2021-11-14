@@ -1,26 +1,26 @@
 @extends('admin.layouts.master')
 @section('content')
 <div class="modal-body">
-
-    <form action="{{url('outlet', $Outlet->id)}}/update" method="POST">
+    <h1>Edit Outlet</h1>
+    <form action="{{url('admin/outlet', $Outlets->id)}}/update" method="POST">
         {{csrf_field()}}
 
         <div class="form-group">
             <label for="name">Nama</label>
             <input name="name" type="text" class="form-control" id="name" aria-describedby="name" required
-                value="{{$Outlet->name}}">
+                value="{{$Outlets->name}}">
         </div>
 
         <div class="form-group">
-            <label for="Alamat">Alamat</label>
-            <input name="Alamat" type="Alamat" class="form-control" id="Alamat" aria-describedby="Alamat" required
-                value="{{$Outlet->address}}">
+            <label for="address">Alamat</label>
+            <input name="address" type="text" class="form-control" id="address" aria-describedby="address" required
+                value="{{$Outlets->address}}">
         </div>
 
         <div class="form-group">
             <label for="telephone">Telephone</label>
             <input name="telephone" type="number" class="form-control" id="telephone" aria-describedby="telephone"
-                required value="{{$Outlet->telephone}}">
+                required value="{{$Outlets->telephone}}">
         </div>
 
         <div class="modal-footer">

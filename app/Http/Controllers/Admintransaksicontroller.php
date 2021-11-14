@@ -8,7 +8,7 @@ class Admintransaksicontroller extends Controller
 {
     public function transaksi()
     {
-        return view('admin//transaksi/transaksi');
+        return view('admin/transaksi/transaksi');
     }
     public function list()
     {

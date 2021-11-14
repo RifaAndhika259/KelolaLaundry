@@ -17,21 +17,13 @@ class AdminOutletcontroller extends Controller
 
     public function create(Request $request)
     {
-        $data = Outlet::create([
-            'name' => $request->name,
-            'address' => $request->address,
-            'telephone' => $request->telephone,
-        ]);
-
-        // dd($data);
-
-        Alert::success('Berhasil', 'Data Sudah BerhasilDitambahkan');
+        outlet::create($request->all());
         return redirect('admin/outlet');
     }
     public function edit($id)
     {
-        $Outlet = Outlet::find($id);
-        return view('admin/Outlet.edit', compact('Outlet'));
+        $Outlets = outlet::find($id);
+        return view('admin/outlet.edit', compact('Outlets'));
     }
 
     public function update(Request $request, $id)
@@ -39,7 +31,7 @@ class AdminOutletcontroller extends Controller
         $update = Outlet::find($id);
         $update->update($request->all());
         Alert::success('Berhasil', 'Data Sudah Berhasil Diubah');
-        return redirect('admin/Outlet');
+        return redirect('admin/outlet');
     }
 
     public function delete($id)
@@ -47,6 +39,6 @@ class AdminOutletcontroller extends Controller
         $delete = Outlet::find($id);
         $delete->delete();
         Alert::success('Berhasil', 'Data Sudah Berhasil Dihapus');
-        return redirect('admin/Outlet');
+        return redirect('admin/outlet');
     }
 }

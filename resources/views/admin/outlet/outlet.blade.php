@@ -33,13 +33,13 @@
                         <tbody>
                             <td>{{$i++}}</td>
                             <td> {{$outlet->name}}</td>
-                            <td> {{$outlet->addres}} </td>
+                            <td> {{$outlet->address}} </td>
                             <td> {{$outlet->telephone}}</td>
 
                             <td>
                                 <a href="{{url('/admin/outlet',$outlet->id)}}/edit"
                                     class="btn btn-primary btn-sm waves-effect m-1"><i class="fa fa-edit"></i></a>
-                                <a href="{{url('/admin/outlet',$outlet->id)}}/delete"
+                                <a href="{{url('admin/outlet',$outlet->id)}}/delete"
                                     class="btn btn-danger btn-sm waves-effect m-1"
                                     onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
                                         class="fa fa-trash"></i></a>
@@ -72,11 +72,11 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{url('outlet')}}/create" method="POST">
-                    {{csrf_field()}}
+                <form action="{{url('admin/outlet')}}/create" method="POST">
+                    @csrf
 
                     <div class="form-group">
-                        <label for="object">Nama</label>
+                        <label for="object">Nama Toko</label>
                         <input name="name" type="text" class="form-control" id="object" aria-describedby="object"
                             required>
                     </div>

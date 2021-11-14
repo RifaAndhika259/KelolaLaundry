@@ -17,7 +17,7 @@ class CreateOutletsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
-            $table->integer('telephone');
+            $table->string('telephone');
             $table->timestamps();
         });
     }
