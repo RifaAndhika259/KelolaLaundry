@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Product;
 use RealRashid\SweetAlert\Facades\Alert;
-
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class Adminproductcontroller extends Controller

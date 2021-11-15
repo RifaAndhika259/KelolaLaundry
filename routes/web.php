@@ -33,35 +33,35 @@ Route::get('admin', function () {
 // Admin-member
 Route::prefix('admin')->group(function () {
 
-    Route::get('member', 'Adminmembercontroller@member');
-    Route::post('member/create', 'Adminmembercontroller@create');
-    Route::get('member/{id}/edit', 'Adminmembercontroller@edit');
-    Route::post('member/{id}/update', 'Adminmembercontroller@update');
-    Route::get('member/{id}/delete', 'Adminmembercontroller@delete');
+    Route::get('member', 'Admin\Adminmembercontroller@member');
+    Route::post('member/create', 'Admin\Adminmembercontroller@create');
+    Route::get('member/{id}/edit', 'Admin\Adminmembercontroller@edit');
+    Route::post('member/{id}/update', 'Admin\Adminmembercontroller@update');
+    Route::get('member/{id}/delete', 'Admin\Adminmembercontroller@delete');
     // Admin-transaksi
-    Route::get('transaksi', 'Admintransaksicontroller@transaksi');
-    Route::get('listtransaksi', 'Admintransaksicontroller@list');
-    Route::get('riwayattransaksi', 'Admintransaksicontroller@riwayat');
-    Route::get('transaksi/detailtransaksi', 'Admintransaksicontroller@detail');
+    Route::get('transaksi', 'Admin\Admintransaksicontroller@transaksi');
+    Route::get('listtransaksi', 'Admin\Admintransaksicontroller@list');
+    Route::get('riwayattransaksi', 'Admin\Admintransaksicontroller@riwayat');
+    Route::get('transaksi/detailtransaksi', 'Admin\Admintransaksicontroller@detail');
 
     // End transaksi
     // Admin-product
-    Route::get('product', 'Adminproductcontroller@product');
-    Route::post('product/create', 'Adminproductcontroller@create');
-    Route::get('{id}/edit', 'Adminproductcontroller@edit');
-    Route::post('{id}/update', 'Adminproductcontroller@update');
-    Route::get('{id}/delete', 'Adminproductcontroller@delete');
+    Route::get('product', 'Admin\Adminproductcontroller@product');
+    Route::post('product/create', 'Admin\Adminproductcontroller@create');
+    Route::get('{id}/edit', 'Admin\Adminproductcontroller@edit');
+    Route::post('{id}/update', 'Admin\Adminproductcontroller@update');
+    Route::get('{id}/delete', 'Admin\Adminproductcontroller@delete');
     // outlet
-    Route::get('outlet', 'Adminoutletcontroller@outlet');
-    Route::post('outlet/create', 'Adminoutletcontroller@create');
-    Route::get('outlet/{id}/edit', 'Adminoutletcontroller@edit');
-    Route::post('outlet/{id}/update', 'Adminoutletcontroller@update');
-    Route::get('outlet/{id}/delete', 'Adminoutletcontroller@delete');
+    Route::get('outlet', 'Admin\Adminoutletcontroller@outlet');
+    Route::post('outlet/create', 'Admin\Adminoutletcontroller@create');
+    Route::get('outlet/{id}/edit', 'Admin\Adminoutletcontroller@edit');
+    Route::post('outlet/{id}/update', 'Admin\Adminoutletcontroller@update');
+    Route::get('outlet/{id}/delete', 'Admin\Adminoutletcontroller@delete');
     // end outlet
 
     // manajement akses
-    Route::get('pengguna', 'Adminaksescontroller@pengguna');
-    Route::get('hakakses', 'Adminaksescontroller@HakAkses');
+    Route::get('pengguna', 'Admin\Adminaksescontroller@pengguna');
+    Route::get('hakakses', 'Admin\Adminaksescontroller@HakAkses');
     // End manajement akses
 });
 
@@ -79,11 +79,11 @@ Route::get('kasir', function () {
 
 
 Route::prefix('kasir')->group(function () {
-    Route::get('member', 'kasirmembercontroller@member');
-    Route::post('member/create', 'kasirmembercontroller@create');
-    Route::get('member/{id}/edit', 'kasirmembercontroller@edit');
-    Route::post('member/{id}/update', 'kasirmembercontroller@update');
-    Route::get('member/{id}/delete', 'kasirmembercontroller@delete');
+    Route::get('member', 'Kasir\kasirmembercontroller@member');
+    Route::post('member/create', 'Kasir\kasirmembercontroller@create');
+    Route::get('member/{id}/edit', 'Kasir\kasirmembercontroller@edit');
+    Route::post('member/{id}/update', 'Kasir\kasirmembercontroller@update');
+    Route::get('member/{id}/delete', 'Kasir\kasirmembercontroller@delete');
 });
 
 
@@ -95,7 +95,7 @@ Route::get('owner', function () {
 
 Route::prefix('owner')->group(function () {
 
-    Route::get('/transaksi/riwayat', 'Ownertransaksicontroller@transaksi')->name('owner');
+    Route::get('/transaksi/riwayat', 'Owner\Ownertransaksicontroller@transaksi')->name('owner');
 });
 
 

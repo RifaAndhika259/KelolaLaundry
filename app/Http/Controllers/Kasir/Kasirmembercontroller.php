@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Kasir;
 
 use RealRashid\SweetAlert\Facades\Alert;
-
+use App\Http\Controllers\Controller;
 use App\Member;
 use Illuminate\Http\Request;
 

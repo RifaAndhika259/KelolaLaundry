@@ -22,9 +22,9 @@ class MemberSeeder extends Seeder
         'email' => 'budi@gmail.com',
        ]);
      $Member = Member::create([
-      'name' => 'budi',
+      'name' => 'billy',
       'telephone' => '0890192018648',
-      'email' => 'budi@gmail.com',
+      'email' => 'billy@gmail.com',
      ]);
     }
 }
