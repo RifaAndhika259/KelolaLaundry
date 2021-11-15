@@ -8,4 +8,3 @@ class Outlet extends Model
 {
     protected $fillable = ['name', 'address', 'telephone'];
 }
-

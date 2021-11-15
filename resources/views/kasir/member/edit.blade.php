@@ -2,7 +2,7 @@
 @section('content')
 <div class="modal-body">
 
-    <form action="{{url('member', $member->id)}}/update" method="POST">
+    <form action="{{url('kasir/member', $member->id)}}/update" method="POST">
         {{csrf_field()}}
 
         <div class="form-group">
@@ -29,7 +29,7 @@
         <div class="modal-footer">
 
             <button type="submit" class="btn btn-primary">UPDATE</button>
-            <button type="submit" class="btn btn-danger"> <a href="{{url('/kasir/member')}}">Batal</a></button>
+            <button type="submit" class="btn btn-danger" a href="{{url('/kasir/member')}}">Batal</a></button>
         </div>
     </form>
 

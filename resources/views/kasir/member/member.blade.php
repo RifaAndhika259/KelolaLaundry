@@ -1,19 +1,5 @@
 @extends('kasir.layouts.master')
 @section('content')
-<div class="row">
-    <div class="col">
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-table"></i>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    +
-                </button> Tambah Member
-
-            </div>
-
-        </div>
-    </div>
-</div>
 
 {{-- table --}}
 <div class="row">
@@ -24,8 +10,12 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <table id="default-datatable" class="table table-bordered">
-                        <div class="card-header"><i class="fa fa-table"></i> Data Member Laundry</div>
+                        <div class="card-header">Customer Laundry</div>
                         <div class="card-body">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
+                                Tambah Member
+                            </button>
                         </div>
                         <thead>
                             <tr>
@@ -48,9 +38,9 @@
                                 <td>{{$member->email}}</td>
 
                                 <td>
-                                    <a href="{{url('member',$member->id)}}/edit"
+                                    <a href="{{url('kasir/member',$member->id)}}/edit"
                                         class="btn btn-primary btn-sm waves-effect m-1"><i class="fa fa-edit"></i></a>
-                                    <a href="{{url('member',$member->id)}}/delete"
+                                    <a href="{{url('kasir/member',$member->id)}}/delete"
                                         class="btn btn-danger btn-sm waves-effect m-1"
                                         onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
                                             class="fa fa-trash"></i></a>
@@ -77,7 +67,7 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{url('member')}}/create" method="POST">
+                <form action="{{url('kasir/member')}}/create" method="POST">
                     {{csrf_field()}}
 
                     <div class="form-group">

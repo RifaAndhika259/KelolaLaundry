@@ -14,7 +14,8 @@
 
                         </div>
                         <div class="card-body">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
                                 Tambah Product
                             </button>
                         </div>
@@ -63,7 +64,7 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{url('product')}}/create" method="POST">
+                <form action="{{url('admin/product')}}/create" method="POST">
                     {{csrf_field()}}
 
                     <div class="form-group">

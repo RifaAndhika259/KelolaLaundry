@@ -6,7 +6,7 @@
 
 
 <!-- Modal -->
-<h3>Edit Data Product Laundry</h3>
+<h1>Edit Product</h1>
 <br>
 <form action="{{ URL::to('admin',$product->id)}}/update" method="POST">
     @csrf

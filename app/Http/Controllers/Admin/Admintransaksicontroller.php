@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
 class Admintransaksicontroller extends Controller
 {
     public function transaksi()
     {
-        return view('admin//transaksi/transaksi');
+        return view('admin/transaksi/transaksi');
     }
     public function list()
     {

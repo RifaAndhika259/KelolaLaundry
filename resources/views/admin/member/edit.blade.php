@@ -1,8 +1,8 @@
 @extends('admin.layouts.master')
 @section('content')
 <div class="modal-body">
-
-    <form action="{{url('member', $member->id)}}/update" method="POST">
+    <h1>Edit Member</h1>
+    <form action="{{url('admin/member', $member->id)}}/update" method="POST">
         {{csrf_field()}}
 
         <div class="form-group">

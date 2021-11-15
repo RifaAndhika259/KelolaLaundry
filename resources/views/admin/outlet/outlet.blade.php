@@ -12,34 +12,47 @@
                     <table id="default-datatable" class="table table-bordered">
                         <div class="card-header">Outlet</div>
                         <div class="card-body">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                Tambah Product
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
+                                Tambah Outlet
                             </button>
                         </div>
                         <thead>
                             <tr>
                                 <th>no</th>
-                                <th>nama </th>
+                                <th>nama toko </th>
                                 <th>alamat</th>
                                 <th>telephon</th>
                                 <th> action </th>
                             </tr>
                         </thead>
+                        <?php $i=1; ?>
+                        @foreach ($Outlets as $outlet)
+
+
                         <tbody>
-                               <td> 1</td>
-                               <td> laundri sayati </td>
-                               <td> gergerkalong</td>
-                               <td>08821210210</td>
-                               <td>
-                                <a href=""
+                            <td>{{$i++}}</td>
+                            <td> {{$outlet->name}}</td>
+                            <td> {{$outlet->address}} </td>
+                            <td> {{$outlet->telephone}}</td>
+
+                            <td>
+                                <a href="{{url('/admin/outlet',$outlet->id)}}/edit"
                                     class="btn btn-primary btn-sm waves-effect m-1"><i class="fa fa-edit"></i></a>
-                                <a href=""
+                                <a href="{{url('admin/outlet',$outlet->id)}}/delete"
                                     class="btn btn-danger btn-sm waves-effect m-1"
                                     onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
                                         class="fa fa-trash"></i></a>
                             </td>
+                            {{-- <td>
+                                <a href="" class="btn btn-primary btn-sm waves-effect m-1"><i
+                                        class="fa fa-edit"></i></a>
+                                <a href="" class="btn btn-danger btn-sm waves-effect m-1"
+                                    onclick="return confirm('Apakah anda yakin akan menghapus data?')"><i
+                                        class="fa fa-trash"></i></a>
+                            </td> --}}
 
-
+                            @endforeach
                     </table>
                 </div>
             </div>
@@ -59,25 +72,25 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{url('outlet')}}/create" method="POST">
-                    {{csrf_field()}}
+                <form action="{{url('admin/outlet')}}/create" method="POST">
+                    @csrf
 
                     <div class="form-group">
-                        <label for="object">Nama</label>
-                        <input name="object" type="text" class="form-control" id="object" aria-describedby="object"
+                        <label for="object">Nama Toko</label>
+                        <input name="name" type="text" class="form-control" id="object" aria-describedby="object"
                             required>
                     </div>
 
 
                     <div class="form-group">
                         <label for="price">alamat</label>
-                        <input name="price" type="text" class="form-control" id="price" aria-describedby="price"
+                        <input name="address" type="text" class="form-control" id="price" aria-describedby="price"
                             required>
                     </div>
 
                     <div class="form-group">
                         <label for="price">telephon</label>
-                        <input name="price" type="number" class="form-control" id="price" aria-describedby="price"
+                        <input name="telephone" type="number" class="form-control" id="price" aria-describedby="price"
                             required>
                     </div>
 
@@ -96,32 +109,32 @@
 </div>
 <!-- End Row-->
 {{-- <div class="row">
-<div class="col-lg-12">
-<div class="card">
+    <div class="col-lg-12">
+        <div class="card">
 
-    <div class="card-body">
-    <form id="basic-form" action="#">
-        <div>
-<h3>Outlet</h3>
-<section>
-    <div class="form-group">
-        <label> name *</label>
-        <input type="text" class="form-control" value="laundry">
-    </div>
-    <div class="form-group">
-        <label> address *</label>
-        <input type="text" class="form-control " value="Bojong tanjung bandung indonesia">
-    </div>
-    <div class="form-group">
-        <label>telephon *</label>
-        <input type="text" class="form-control" value="0821080101010101">
-    </div>
-</section>
-<button type="submit" class="btn btn-primary">Submit</button>
+            <div class="card-body">
+                <form id="basic-form" action="#">
+                    <div>
+                        <h3>Outlet</h3>
+                        <section>
+                            <div class="form-group">
+                                <label> name *</label>
+                                <input type="text" class="form-control" value="laundry">
+                            </div>
+                            <div class="form-group">
+                                <label> address *</label>
+                                <input type="text" class="form-control " value="Bojong tanjung bandung indonesia">
+                            </div>
+                            <div class="form-group">
+                                <label>telephon *</label>
+                                <input type="text" class="form-control" value="0821080101010101">
+                            </div>
+                        </section>
+                        <button type="submit" class="btn btn-primary">Submit</button>
 
-</form>
+                </form>
+            </div>
+        </div>
     </div>
-    </div>
-</div>
 </div> --}}
 @endsection

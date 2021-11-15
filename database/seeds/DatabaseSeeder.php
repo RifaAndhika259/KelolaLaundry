@@ -1,5 +1,7 @@
 <?php
 
+use App\Member;
+use App\Outlet;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,9 +14,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            AdminUserSeeder::class,
-            KasirUserSeeder::class,
-            OwnerUserSeeder::class,
+            UserSeeder::class,
+            ProdukSeeder::class,
+            MemberSeeder::class,
+            OuletsSeeder::class,
         ]);
     }
 }

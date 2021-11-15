@@ -18,7 +18,7 @@
         <li>
             <a href="{{url('admin/product')}}">
                 <i class="icon-layers"></i>
-                <span>Product</span>
+                <span>Produk</span>
 
             </a>
 
@@ -27,7 +27,7 @@
         <li>
             <a href="{{url('admin/member')}}">
                 <i class="icon-user"></i>
-                <span>Member</span>
+                <span>Pelangggan</span>
 
             </a>
 
@@ -52,7 +52,7 @@
         <li>
             <a href="{{url('admin/outlet')}}">
                 <i class="icon-note"></i>
-                <span>Outlet</span>
+                <span>Toko</span>
             </a>
         </li>
 
