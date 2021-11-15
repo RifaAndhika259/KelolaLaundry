@@ -4,12 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Member;
 use RealRashid\SweetAlert\Facades\Alert;
-<<<<<<< HEAD:app/Http/Controllers/Adminmembercontroller.php
-
-=======
 use App\Http\Controllers\Controller;
-use App\Member;
->>>>>>> a709e90924165d9ec1598b7e1f73813e1f05975c:app/Http/Controllers/Admin/Adminmembercontroller.php
 use Illuminate\Http\Request;
 
 class Adminmembercontroller extends Controller

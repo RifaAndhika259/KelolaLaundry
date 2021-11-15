@@ -1,14 +1,8 @@
 @extends('admin.layouts.master')
 @section('content')
-<<<<<<< HEAD
-{{-- <div class="modal-body">
-
-    <form action="{{url('outlet', $outlet->id)}}/update" method="POST">
-=======
 <div class="modal-body">
     <h1>Edit Outlet</h1>
     <form action="{{url('admin/outlet', $Outlets->id)}}/update" method="POST">
->>>>>>> a709e90924165d9ec1598b7e1f73813e1f05975c
         {{csrf_field()}}
 
         <div class="form-group">

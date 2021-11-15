@@ -72,16 +72,6 @@ Route::prefix('admin')->group(function () {
 // kasir member
 
 
-<<<<<<< HEAD
-// kasir member
-Route::get('kasir/member', 'kasirmembercontroller@member');
-Route::post('member/create', 'kasirmembercontroller@create');
-Route::get('/member/{id}/edit', 'kasirmembercontroller@edit');
-Route::post('/member/{id}/update', 'kasirmembercontroller@update');
-Route::get('/member/{id}/delete', 'kasirmembercontroller@delete');
-
-=======
->>>>>>> a709e90924165d9ec1598b7e1f73813e1f05975c
 // end admin
 Route::get('kasir', function () {
     return view('kasir.kasir');
