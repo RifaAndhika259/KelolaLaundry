@@ -74,6 +74,7 @@ Route::post('member/create', 'kasirmembercontroller@create');
 Route::get('/member/{id}/edit', 'kasirmembercontroller@edit');
 Route::post('/member/{id}/update', 'kasirmembercontroller@update');
 Route::get('/member/{id}/delete', 'kasirmembercontroller@delete');
+
 // end admin
 Route::get('kasir', function () {
     return view('kasir.kasir');

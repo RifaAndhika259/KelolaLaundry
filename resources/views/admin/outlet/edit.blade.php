@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-<div class="modal-body">
+{{-- <div class="modal-body">
 
     <form action="{{url('outlet', $outlet->id)}}/update" method="POST">
         {{csrf_field()}}
@@ -30,5 +30,5 @@
         </div>
     </form>
 
-</div>
+</div> --}}
 @endsection

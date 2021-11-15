@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Member;
 use RealRashid\SweetAlert\Facades\Alert;
 
-use App\Member;
 use Illuminate\Http\Request;
 
 class Adminmembercontroller extends Controller
