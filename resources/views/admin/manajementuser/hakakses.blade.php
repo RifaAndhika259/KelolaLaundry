@@ -10,21 +10,24 @@
             <thead>
                 <tr>
                     <th>nama</th>
-                    <th>username</th>
+                    <th>Email</th>
                     <th>role</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-        <tr>
-            <td>budi</td>
-            <td>syaripudi</td>
-            <td>admin</td>
-            <td>
-            <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i class="icon-note"></i> </button>
-            <button type="button" class="btn btn-danger waves-effect waves-light m-1"> <i class="fa fa-trash-o"></i> </button>
-        </td>
-        </tr>
+                @foreach ($users as $User )
+                <tr>
+                    <td>{{$User->name}}</td>
+                    <td>{{$User->email}}</td>
+                    <td>{{$User->role}}</td>
+                    <td>
+                    <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i class="icon-note"></i> </button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light m-1"> <i class="fa fa-trash-o"></i> </button>
+                </td>
+                </tr>
+
+                @endforeach
         </table>
         </div>
         </div>

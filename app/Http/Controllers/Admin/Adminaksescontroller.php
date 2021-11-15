@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,6 +13,7 @@ class Adminaksescontroller extends Controller
     }
     public function HakAkses()
     {
-        return view('admin/manajementuser/hakakses');
+        $users = User::all();
+        return view('admin/manajementuser/hakakses', compact('users'));
     }
 }
