@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-15">
         <div class="card">
             <div class="card-header text-uppercase">Transaksi</div>
             <div class="card-body">
@@ -11,7 +11,7 @@
 
                     <div class="form-group row">
                         <label for="placeholder-input" class="col-sm-3 col-form-label">Member</label>
-                        <div class="col-7">
+                        <div class="col-9">
                             <input type="text" class="form-control" placeholder="masukan nama member">
                         </div>
                     </div>
