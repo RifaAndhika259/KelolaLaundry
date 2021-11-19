@@ -12,31 +12,18 @@
                     <th>kode invoice</th>
                     <th>nama pemilik</th>
                     <th>nama paket</th>
-                    <th>Jenis</th>
-                    <th>Harga</th>
-                    <th>tanggal </th>
-                    <th>pajak</th>
-                    <th>dibayar</th>
-                    <th>status</th>
-                    <th>Action</th>
+                    <th>Total Harga</th>
                 </tr>
             </thead>
             <tbody>
-        <tr>
-            <td>TDR-00001</td>
-            <th>supradi</th>
-            <td>selimut</td>
-            <td>Kiloan</td>
-            <td>25000</td>
-            <td>24-10-2021</td>
-            <td>10000</td>
-            <td>lunas</td>
-            <td>proses</td>
-            <td>
-            <button type="button" class="btn btn-primary waves-effect waves-light m-1"> <i class="fa fa-check"></i> </button>
-           <a href="{{url('admin/transaksi/detailtransaksi')}}"><button type="button" class="btn btn-success waves-effect waves-light m-1"> <i class="fa fa-info"></i>
-        </td>
-        </tr>
+                @foreach ($transaction as $data)
+                <tr>
+                    <td>{{ $data->code_transaction }}</td>
+                    <td>{{ $data->name }}</td>
+                    <td>{{ $data->object }}</td>
+                    <td>{{ $data->amount }}</td>
+                </tr>
+                @endforeach
         </table>
         </div>
         </div>

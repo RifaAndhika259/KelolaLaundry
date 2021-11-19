@@ -63,6 +63,8 @@ Route::prefix('admin')->group(function () {
     Route::get('pengguna', 'Admin\Adminaksescontroller@pengguna');
     Route::get('hakakses', 'Admin\Adminaksescontroller@HakAkses');
     // End manajement akses
+
+    Route::post('transaksi/post','Admin\Admintransaksicontroller@store');
 });
 
 // End Admin-member

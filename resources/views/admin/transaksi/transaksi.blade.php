@@ -7,23 +7,25 @@
             <div class="card-header text-uppercase">Transaksi</div>
             <div class="card-body">
 
-                <form>
+                <form action="{{ url('admin/transaksi/post') }}" method="POST">
+                    @csrf
 
                     <div class="form-group row">
-                        <label for="placeholder-input" class="col-sm-3 col-form-label">Member</label>
-                        <div class="col-9">
-                            <input type="text" class="form-control" placeholder="masukan nama member">
-                        </div>
+                        <select class="js-example-basic-single" name="member_id">
+                            @foreach ($member as $data)
+                                <option value="{{ $data->id }}">{{ $data->name }}</option>
+                            @endforeach
+                          </select>
                     </div>
 
 
                     <div class="form-group row">
                         <label for="basic-select" class="col-sm-3 col-form-label">Product</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="basic-select">
-                                <option>Kiloan </option>
-                                <option>Satuan </option>
-                                <option>Lainnya</option>
+                            <select class="form-control" id="basic-select" name="product_id">
+                                @foreach ($product as $data)
+                                <option value="{{ $data->id }}">{{ $data->object }}</option>
+                            @endforeach
                             </select>
                         </div>
                     </div>
@@ -33,7 +35,7 @@
 
 
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="masukan jumlah">
+                            <input type="number" class="form-control" name="amount" placeholder="masukan jumlah">
                         </div>
 
                     </div>
