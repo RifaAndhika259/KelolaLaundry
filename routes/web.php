@@ -101,7 +101,11 @@ Route::prefix('owner')->group(function () {
 });
 
 
-
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles','RoleController');
+    Route::resource('users','UserController');
+    Route::resource('products','ProductController');
+});
 
 
 Route::get('logout', function () {

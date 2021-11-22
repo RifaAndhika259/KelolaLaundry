@@ -20,7 +20,7 @@
 
                     <table class="table table-bordered" id="dynamicAddRemove">
                     <div class="form-group row" class="table table-bordered">
-                        <label for="basic-select" class="col-sm-3 col-form-label">Product</label>
+                        <label for="basic-select" class="col-sm-3 col-form-label">Produk</label>
                         <div class="col-sm-9">
                             <select class="form-control" id="basic-select" name="product_id">
                                 @foreach ($product as $data)
@@ -45,8 +45,8 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
-                                    <button class="btn btn-block btn-primary" type="button" name="add" id="dynamic-ar" class="btn btn-outline-primary">Add Subject<i class="fa fa-plus"></i></button>
-                                    <button type="submit" class="btn btn-outline-success btn-block" id="add_product">Save</button>
+                                    <button class="btn btn-block btn-primary" type="button" name="add" id="dynamic-ar" class="btn btn-outline-primary">Tambah Produk<i class="fa fa-plus"></i></button>
+                                    <button type="submit" class="btn btn-outline-success btn-block" id="add_product">Simpan</button>
                                 </div>
                             </div>
                         </div>

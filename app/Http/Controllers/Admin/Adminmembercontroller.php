@@ -17,7 +17,12 @@ class Adminmembercontroller extends Controller
 
     public function create(Request $request)
     {
-        Member::create($request->all());
+        $cek = Member::whereEmail($request->input('email'))->first();
+        if($cek){
+            Alert::error('Gagal', 'Data Email Sudah Tersedia');
+            return back();
+        }
+
         Alert::success('Berhasil', 'Member Sudah Berhasil Ditambahkan');
         return redirect('admin/member');
     }
@@ -30,6 +35,11 @@ class Adminmembercontroller extends Controller
 
     public function update(Request $request, $id)
     {
+        // $validate = Member::whereEmail($request->input('email'))->first()->
+        // if($validate){
+        //     Alert::error('Gagal', 'Data Email Sudah tersedia');
+        //     return back();
+        // }
         $member = Member::find($id);
         $member->update($request->all());
         Alert::success('Berhasil', 'Member Sudah Berhasil Di Update');
