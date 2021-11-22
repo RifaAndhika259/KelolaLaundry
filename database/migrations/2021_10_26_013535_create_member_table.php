@@ -19,6 +19,7 @@ class CreateMemberTable extends Migration
             $table->String('telephone');
             $table->String('email');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
