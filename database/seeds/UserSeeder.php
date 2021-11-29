@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use PhpParser\Node\Expr\Assign;
+
 class UserSeeder extends Seeder
 {
     /**
@@ -15,23 +17,23 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('admin123'),
-            'role' => 'admin'
         ]);
+        $admin->assignRole('admin');
 
 
         $kasir = User::create([
             'name' => 'kasir',
             'email' => 'kasir@gmail.com',
             'password' => bcrypt('kasir123'),
-            'role' => 'kasir'
         ]);
+        $kasir->assignRole('kasir');
 
         $owner = User::create([
             'name' => 'owner',
             'email' => 'owner@gmail.com',
             'password' => bcrypt('owner123'),
-            'role' => 'owner'
         ]);
+        $owner->assignRole('owner');
 
     }
 }
