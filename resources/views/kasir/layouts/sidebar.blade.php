@@ -9,7 +9,7 @@
     <ul class="sidebar-menu do-nicescrol">
         <li class="sidebar-header">MAIN NAVIGATION</li>
         <li>
-            <a href="{{url('kasir')}}">
+            <a href="{{url('kasir/dashboard')}}">
                 <i class="icon-home"></i> <span>Dashboard</span>
             </a>
 

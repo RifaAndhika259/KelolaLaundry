@@ -24,15 +24,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-// route admin
-Route::get('admin', function () {
-    return view('admin.admin');
-})->middleware('checkRole:admin');
-
-// Admin-member
-Route::prefix('admin')->group(function () {
-
+Route::group(['prefix' => 'admin','middleware' => ['role:admin']], function () {
+    Route::get('dashboard', 'Admin\Adminmembercontroller@index');
     Route::get('member', 'Admin\Adminmembercontroller@member');
     Route::post('member/create', 'Admin\Adminmembercontroller@create');
     Route::get('member/{id}/edit', 'Admin\Adminmembercontroller@edit');
@@ -61,26 +54,16 @@ Route::prefix('admin')->group(function () {
 
     // manajement akses
     Route::get('pengguna', 'Admin\Adminaksescontroller@pengguna');
+    Route::post('pengguna/post', 'Admin\Adminaksescontroller@storeUser');
     Route::get('hakakses', 'Admin\Adminaksescontroller@HakAkses');
     // End manajement akses
 
     Route::post('transaksi/post','Admin\Admintransaksicontroller@store');
 });
 
-// End Admin-member
-
-
-
-// kasir member
-
-
-// end admin
-Route::get('kasir', function () {
-    return view('kasir.kasir');
-})->middleware(['checkRole:kasir,admin']);
-
-
-Route::prefix('kasir')->group(function () {
+// kasir
+Route::group(['prefix' => 'kasir','middleware' => ['role:kasir']], function () {
+    Route::get('dashboard','Kasir\kasirmembercontroller@index');
     Route::get('member', 'Kasir\kasirmembercontroller@member');
     Route::post('member/create', 'Kasir\kasirmembercontroller@create');
     Route::get('member/{id}/edit', 'Kasir\kasirmembercontroller@edit');
@@ -90,25 +73,10 @@ Route::prefix('kasir')->group(function () {
 
 
 
-Route::get('owner', function () {
-    return view('owner.owner');
-})->middleware(['checkRole:owner,admin']);
-
-
-Route::prefix('owner')->group(function () {
-
+// owner
+Route::group(['prefix' => 'owner','middleware' => ['role:owner']], function () {
+    Route::get('dashboard', 'Owner\Ownertransaksicontroller@index');
     Route::get('/transaksi/riwayat', 'Owner\Ownertransaksicontroller@transaksi')->name('owner');
 });
 
 
-Route::group(['middleware' => ['auth']], function() {
-    Route::resource('roles','RoleController');
-    Route::resource('users','UserController');
-    Route::resource('products','ProductController');
-});
-
-
-Route::get('logout', function () {
-    Auth::logout();
-    return redirect('/');
-});
