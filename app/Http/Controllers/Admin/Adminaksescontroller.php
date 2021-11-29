@@ -7,8 +7,9 @@ use App\Http\Controllers\Controller;
 
 class Adminaksescontroller extends Controller
 {
-    public function pengguna()
+    public function pengguna(Request $request)
     {
+        User::create($request->all());
         return view('admin/manajementuser/pengguna');
     }
     public function HakAkses()
