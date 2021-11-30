@@ -9,6 +9,13 @@ use Illuminate\Http\Request;
 
 class Kasirmembercontroller extends Controller
 {
+
+
+    public function index()
+    {
+        return view('kasir.kasir');
+    }
+
     public function member()
     {
         $members = Member::all();

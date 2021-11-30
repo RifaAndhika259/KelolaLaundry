@@ -8,7 +8,7 @@
         Member
         </div>
         <div class="card-body">
-    <form action="" method="POST">
+    <form action="{{ url('admin/pengguna/post')}}" method="POST">
     @csrf
     <div class="form-group">
         <label for="name">nama</label>
@@ -18,20 +18,20 @@
 
     <div class="form-group">
         <label for="address">Email</label>
-        <input name="address" type="text" class="form-control" id="address" aria-describedby="address" placeholder="masukan alamat email" required
+        <input name="email" type="text" class="form-control" id="address" aria-describedby="address" placeholder="masukan alamat email" required
             value="">
     </div>
 
     <div class="form-group">
-        <label for="telephone">Password</label>
-        <input name="telephone" type="text" class="form-control" id="telephone" placeholder="masukan password" aria-describedby="telephone"
+        <label for="password">Password</label>
+        <input name="password" type="password" class="form-control" id="telephone" placeholder="masukan password" aria-describedby="telephone"
             required value="">
     </div>
     <label for="exampleFormControlSelect1">Role *</label>
-            <select class="form-control fa fa-angle-left float-right" id="exampleFormControlSelect1">
-            <option>Admin</option>
-            <option>Kasir</option>
-            <option>Owner</option>
+            <select class="form-control fa fa-angle-left float-right" name="role" id="exampleFormControlSelect1">
+                @foreach ($role as $data)
+                <option value="{{ $data->name}}">{{ $data->name}}</option>
+                @endforeach
         </select>
     </div>
 

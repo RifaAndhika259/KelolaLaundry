@@ -26,22 +26,20 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '';
-    protected function redirectTo()
-    {
-        if (auth()->user()->role == 'kasir') {
-            return '/kasir';
+    protected function authenticated($request, $user){
+        if($user->hasRole('admin')){
+            return redirect('/admin/dashboard');
         }
+        if ($user->hasRole('kasir')){
+            return redirect('/kasir/dashboard');
 
-        if (auth()->user()->role == 'owner') {
-            return '/owner';
         }
-
-
-        if (auth()->user()->role == 'admin') {
-            return '/admin';
+        if($user->hasRole('owner')){
+            return redirect('/owner/dashboard');
         }
-        return '';
+        else {
+          return back();
+        }
     }
 
 

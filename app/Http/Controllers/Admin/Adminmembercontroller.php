@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class Adminmembercontroller extends Controller
 {
+
+    public function index()
+    {
+        return view('admin.admin');
+    }
+
     public function member()
     {
         $members = Member::all();
