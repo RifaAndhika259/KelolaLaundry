@@ -7,6 +7,8 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use function GuzzleHttp\Promise\all;
+
 class Adminmembercontroller extends Controller
 {
 
@@ -28,7 +30,7 @@ class Adminmembercontroller extends Controller
             Alert::error('Gagal', 'Data Email Sudah Tersedia');
             return back();
         }
-
+        Member::create($request->all());
         Alert::success('Berhasil', 'Member Sudah Berhasil Ditambahkan');
         return redirect('admin/member');
     }

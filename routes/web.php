@@ -56,6 +56,8 @@ Route::group(['prefix' => 'admin','middleware' => ['role:admin']], function () {
     Route::get('pengguna', 'Admin\Adminaksescontroller@pengguna');
     Route::post('pengguna/post', 'Admin\Adminaksescontroller@storeUser');
     Route::get('hakakses', 'Admin\Adminaksescontroller@HakAkses');
+    Route::post('hakakses/{id}/update', 'Admin\Adminaksescontroller@edituser');
+    Route::get('hakakses/{id}/delete', 'Admin\Adminaksescontroller@destroy');
     // End manajement akses
 
     Route::post('transaksi/post','Admin\Admintransaksicontroller@store');

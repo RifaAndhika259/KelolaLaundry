@@ -20,10 +20,13 @@
                 <tr>
                     <td>{{$User->name}}</td>
                     <td>{{$User->email}}</td>
-                    <td>{{$User->role}}</td>
+                    <td>{{ $User->getRoleNames()->implode('')}}</td>
                     <td>
-                    <button type="button" class="btn btn-primary waves-effect waves-light m-1" data-toggle="modal" data-target="#modal{{ $User->id }}"> <i class="icon-note"></i> </button>
-                    <button type="button" class="btn btn-danger waves-effect waves-light m-1"> <i class="fa fa-trash-o"></i> </button>
+                    <button type="button" class="btn btn-primary waves-effect waves-light m-1" data-toggle="modal" data-target="#modal"> <i class="icon-note"></i> </button>
+                    <a href="{{url('admin/hakakses', $User->id)}}/delete"
+                        class="btn btn-danger btn-sm waves-effect m-1"
+                         onclick="return confirm('Apakah anda yakin akan menghapus akses ini?')"><i
+                            class="fa fa-trash"></i></a>
                 </td>
                 </tr>
 
@@ -36,7 +39,7 @@
   </div><!-- End Row-->
 
   <!-- Modal -->
-<div class="modal fade" id="modal{{ $User->id }}" tabIndex="-1">
+<div class="modal fade" id="modal" tabIndex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -48,25 +51,27 @@
           </button>
         </div>
         <div class="modal-body">
-            <form>
+            <form action="{{url('admin/hakakses', $User->id)}}/update" method="POST">
+                {{csrf_field()}}
                 <div class="form-group">
-                  <label for="exampleFormControlInput1">Nama</label>
-                  <input type="nama" class="form-control" id="exampleFormControlInput1">
+                  <label for="exampleFormControlInput1">Nama*</label>
+                  <input name="name" type="name" class="form-control" id="exampleFormControlInput1" value="{{$User->name}}">
                 </div>
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Example select</label>
+                  <label for="exampleFormControlSelect1">Role*</label>
                   <select class="form-control" id="exampleFormControlSelect1" name="role">
                       @foreach ($role as $data)
                       <option value="{{ $data->id}}">{{$data->name}}</option>
                       @endforeach
                   </select>
                 </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">batal</button>
+                    <button type="submit" class="btn btn-primary">simpan</button>
+                  </div>
               </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+
       </div>
     </div>
   </div>

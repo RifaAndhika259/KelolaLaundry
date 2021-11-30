@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\User;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
@@ -31,6 +32,23 @@ class Adminaksescontroller extends Controller
         ]);
         $user->assignRole($request->role);
         return redirect()->back();
+}
 
-    }
+public function edituser(Request $request, $id)
+    {
+        // dd($request->all());
+        $user =User::find($id);
+        $user->update($request->all());
+        $user->assignRole($request->role);
+        return redirect()->back();
+}
+public function destroy($id)
+
+{
+    $data = User::find($id);
+    $data->delete();
+    Alert::success('Berhasil', 'akses Sudah Berhasil Di Hapus');
+    return redirect('admin/hakakses');
+}
+
 }
