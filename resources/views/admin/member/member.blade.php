@@ -17,6 +17,9 @@
                                 data-target="#exampleModal">
                                 Tambah Member
                             </button>
+                            <a type="button" class="btn btn-primary" href="member/trash">
+                                Tong sampah
+                            </a>
                         </div>
                         <thead>
                             <tr>

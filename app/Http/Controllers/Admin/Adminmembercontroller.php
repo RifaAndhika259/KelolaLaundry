@@ -62,4 +62,41 @@ class Adminmembercontroller extends Controller
         Alert::success('Berhasil', 'Member Sudah Berhasil Di Hapus');
         return redirect('admin/member');
     }
+
+    public function trash()
+    {
+        $member = member::onlyTrashed()->get();
+        return view('admin.member.trash',compact('member'));
+    }
+
+    public function kembalikan($id)
+    {
+        $member = member::onlyTrashed()->where('id',$id);
+        $member->restore();
+        return redirect('admin/member/trash');
+    }
+
+    public function kembalikan_semua()
+    {
+        $member = member::onlyTrashed();
+        $member->restore();
+
+        return redirect('admin/member/trash');
+    }
+
+    public function hapus_permanen($id)
+    {
+        $member = member::onlyTrashed()->where('id',$id);
+        $member->forceDelete();
+
+        return redirect('admin/member/trash');
+    }
+
+    public function hapus_permanen_semua()
+    {
+        $member = member::onlyTrashed();
+        $member->forceDelete();
+
+        return redirect('admin/member/trash');
+    }
 }

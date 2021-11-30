@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Adminmembercontroller;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,14 @@ Route::group(['prefix' => 'admin','middleware' => ['role:admin']], function () {
     Route::get('member/{id}/edit', 'Admin\Adminmembercontroller@edit');
     Route::post('member/{id}/update', 'Admin\Adminmembercontroller@update');
     Route::get('member/{id}/delete', 'Admin\Adminmembercontroller@delete');
+
+    //menampilkan menu tong sampah
+    Route::get('member/trash','Admin\Adminmembercontroller@trash');
+    Route::get('member/kembalikan/{id}', 'Admin\Adminmembercontroller@kembalikan');
+    Route::get('member/kembalikan_semua', 'Admin\Adminmembercontroller@kembalikan_semua');
+    Route::get('member/hapus_permanen/{id}', 'Admin\Adminmembercontroller@hapus_permanen');
+    Route::get('member/hapus_permanen_semua', 'Admin\Adminmembercontroller@hapus_permanen_semua');
+
     // Admin-transaksi
     Route::get('transaksi', 'Admin\Admintransaksicontroller@transaksi');
     Route::get('listtransaksi', 'Admin\Admintransaksicontroller@list');
